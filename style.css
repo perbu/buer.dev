@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #f5f2ed;
+    color: #2c2c2c;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+a {
+    color: #1a5c6b;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 2rem 0;
+}
+
+/* Header */
+header {
+    margin-bottom: 0.5rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin-bottom: 0.2rem;
+}
+
+header .tagline {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+header .links {
+    font-size: 0.9rem;
+}
+
+header .links a {
+    margin-right: 1rem;
+}
+
+/* About */
+.about p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+/* Projects */
+.projects h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.project {
+    border: 1px solid #ccc;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+    background: #faf8f5;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.06);
+}
+
+.project h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.project p {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 0.4rem;
+}
+
+.project a {
+    font-size: 0.85rem;
+}
+
+/* Java Applet */
+.applet-container {
+    margin-top: 0.5rem;
+}
+
+.applet {
+    background: #c0c0c0;
+    border: 3px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+}
+
+.applet-titlebar {
+    background: #000080;
+    color: #ffffff;
+    padding: 2px 6px;
+    font-size: 11px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.applet-titlebar .controls {
+    display: flex;
+    gap: 2px;
+}
+
+.applet-titlebar .ctrl-btn {
+    background: #c0c0c0;
+    border: 1px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    width: 14px;
+    height: 14px;
+    font-size: 9px;
+    line-height: 12px;
+    text-align: center;
+    color: #000;
+    cursor: default;
+}
+
+.applet-body {
+    border: 2px solid;
+    border-color: #808080 #ffffff #ffffff #808080;
+    background: #000000;
+    color: #00cc00;
+    margin: 4px;
+    padding: 10px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: hidden;
+}
+
+.applet-body .log-line {
+    margin-bottom: 2px;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.progress-outer {
+    background: #333;
+    border: 1px solid #666;
+    height: 14px;
+    margin: 8px 0;
+    display: none;
+}
+
+.progress-inner {
+    background: #00cc00;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s linear;
+}
+
+.prompt-area {
+    display: none;
+    margin-top: 4px;
+}
+
+.prompt-area form {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.prompt-area .prompt-label {
+    color: #00cc00;
+    margin-right: 4px;
+    flex-shrink: 0;
+}
+
+.prompt-area input {
+    background: transparent;
+    border: none;
+    color: #00cc00;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    outline: none;
+    flex: 1;
+    caret-color: #00cc00;
+}
+
+.prompt-area .response {
+    color: #999;
+    margin-top: 4px;
+}
+
+.applet-footer {
+    text-align: center;
+    font-size: 10px;
+    color: #666;
+    padding: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Footer */
+footer {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    body {
+        padding: 1.2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .applet-body {
+        font-size: 11px;
+        min-height: 150px;
+    }
+
+    .prompt-area input {
+        font-size: 11px;
+    }
+}

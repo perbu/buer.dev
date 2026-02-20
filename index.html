@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Per Buer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Per Buer</h1>
+    <div class="tagline">Software person in Oslo</div>
+    <div class="links">
+        <a href="https://github.com/perbu">GitHub</a>
+        <a href="https://codeberg.org/perbu">Codeberg</a>
+        <a href="https://linkedin.com/in/perbu">LinkedIn</a>
+    </div>
+</header>
+
+<hr>
+
+<section class="about">
+    <p>I founded Varnish Software. These days I mostly write Go and am slowly learning Rust.</p>
+</section>
+
+<hr>
+
+<section class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>SOV Reporter</h3>
+        <p>Scans websites for CLOUD Act and digital sovereignty exposure. Checks where your data actually ends up.</p>
+        <a href="https://sov-reporter.eu">sov-reporter.eu</a>
+    </div>
+    <div class="project">
+        <h3>Kasa</h3>
+        <p>A conversational Kubernetes deployment assistant, written in Go. Describe what you want and it figures out the manifests.</p>
+        <a href="https://github.com/perbu/kasa">github.com/perbu/kasa</a>
+    </div>
+    <div class="project">
+	    <h3>Varnish Gateway</h3>
+	    <p>An performant implementation of the kubernetes Gateway API spec</p>
+	    <a href="https://github.com/varnish/gateway/">github.com/varnish/gateway</a>
+    </div>
+	
+</section>
+
+<hr>
+<h2>Remote Terminal access</h2>
+<section class="applet-container">
+    <div class="applet">
+        <div class="applet-titlebar">
+            <span>BuerTerminal.class</span>
+            <div class="controls">
+                <span class="ctrl-btn">_</span>
+                <span class="ctrl-btn">&square;</span>
+                <span class="ctrl-btn">X</span>
+            </div>
+        </div>
+        <div class="applet-body" id="applet-body">
+            <div id="log"></div>
+            <div class="progress-outer" id="progress-outer">
+                <div class="progress-inner" id="progress-inner"></div>
+            </div>
+            <div class="prompt-area" id="prompt-area">
+                <form id="prompt-form">
+                    <span class="prompt-label">&gt;</span>
+                    <input type="text" id="prompt-input" autocomplete="off" autofocus>
+                </form>
+                <div class="response" id="response"></div>
+            </div>
+        </div>
+        <div class="applet-footer">Java&trade; Applet 1.0 &mdash; Best viewed in Netscape Navigator 4.0</div>
+    </div>
+</section>
+
+<hr>
+
+<footer>
+    Per Buer &mdash; Oslo
+</footer>
+
+<script src="term.js"></script>
+
+</body>
+</html>
