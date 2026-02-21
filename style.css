@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -29,15 +31,26 @@ hr {
     margin: 2rem 0;
 }
 
+code {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 0.82em;
+    background: rgba(26, 92, 107, 0.07);
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+    color: #1a5c6b;
+}
+
 /* Header */
 header {
     margin-bottom: 0.5rem;
 }
 
 header h1 {
-    font-size: 1.8rem;
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 2.1rem;
     font-weight: normal;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.15rem;
+    letter-spacing: -0.01em;
 }
 
 header .tagline {
@@ -54,19 +67,48 @@ header .links a {
     margin-right: 1rem;
 }
 
+/* Nav */
+nav {
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+nav a {
+    color: #999;
+    margin-right: 1.5rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1.5px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+nav a:hover {
+    color: #2c2c2c;
+    text-decoration: none;
+    border-bottom-color: #ccc;
+}
+
+nav a.active {
+    color: #2c2c2c;
+    border-bottom-color: #1a5c6b;
+}
+
 /* About */
 .about p {
     margin-bottom: 0.8rem;
     font-size: 0.95rem;
 }
 
-/* Projects */
-.projects h2 {
-    font-size: 1.2rem;
+/* Section headings */
+h2 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 1.35rem;
     font-weight: normal;
     margin-bottom: 1rem;
+    letter-spacing: -0.01em;
 }
 
+/* Projects */
 .project {
     border: 1px solid #ccc;
     padding: 1rem 1.2rem;
@@ -89,6 +131,79 @@ header .links a {
 
 .project a {
     font-size: 0.85rem;
+}
+
+/* Tools page */
+.tools-intro {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1.4rem;
+}
+
+.tool {
+    border: 1px solid #ddd;
+    border-left: 3px solid #1a5c6b;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 0.9rem;
+    background: #faf8f5;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    animation: fadeInUp 0.4s ease both;
+}
+
+.tool:hover {
+    box-shadow: 2px 3px 12px rgba(0,0,0,0.07);
+    transform: translateY(-1px);
+}
+
+.tool h3 {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+    color: #2c2c2c;
+}
+
+.tool h3::before {
+    content: '$ ';
+    color: #aaa;
+    font-weight: 400;
+}
+
+.tool p {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 0.4rem;
+    line-height: 1.55;
+}
+
+.tool a {
+    font-size: 0.82rem;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.tool a:hover {
+    color: #1a5c6b;
+    text-decoration: none;
+}
+
+.tool:nth-child(1) { animation-delay: 0s; }
+.tool:nth-child(2) { animation-delay: 0.05s; }
+.tool:nth-child(3) { animation-delay: 0.1s; }
+.tool:nth-child(4) { animation-delay: 0.15s; }
+.tool:nth-child(5) { animation-delay: 0.2s; }
+.tool:nth-child(6) { animation-delay: 0.25s; }
+.tool:nth-child(7) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Java Applet */
@@ -223,7 +338,11 @@ footer {
     }
 
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
+    }
+
+    .tool {
+        padding: 0.9rem 1rem;
     }
 
     .applet-body {

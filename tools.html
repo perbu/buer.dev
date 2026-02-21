@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLI Tools &mdash; Per Buer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Per Buer</h1>
+    <div class="tagline">Software person in Oslo</div>
+    <div class="links">
+        <a href="https://github.com/perbu">GitHub</a>
+        <a href="https://codeberg.org/perbu">Codeberg</a>
+        <a href="https://linkedin.com/in/perbu">LinkedIn</a>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="tools.html" class="active">CLI Tools</a>
+</nav>
+
+<hr>
+
+<section>
+    <h2>CLI Tools</h2>
+    <p class="tools-intro">Small, focused command-line tools. All written in Go.</p>
+
+    <div class="tool">
+        <h3>git2llm</h3>
+        <p>Generates a text representation of a git repository's tree and file contents, formatted for LLM consumption. Filters out binary files, dotfiles, and secrets automatically. Supports token counting and custom ignore patterns via <code>.llmignore</code>.</p>
+        <a href="https://github.com/perbu/git2llm">github.com/perbu/git2llm</a>
+    </div>
+
+    <div class="tool">
+        <h3>reviewer</h3>
+        <p>AI code review tool. Pipes a repository through <code>git2llm</code> and sends it to Google Gemini for review. Streams markdown output. Can focus on specific areas like security, performance, or error handling.</p>
+        <a href="https://github.com/perbu/reviewer">github.com/perbu/reviewer</a>
+    </div>
+
+    <div class="tool">
+        <h3>describe</h3>
+        <p>Reads your staged git changes and sends them to an LLM to generate a commit message. Works with a local Ollama install out of the box, or with OpenRouter and vLLM as backends.</p>
+        <a href="https://github.com/perbu/describe">github.com/perbu/describe</a>
+    </div>
+
+    <div class="tool">
+        <h3>gosummarize</h3>
+        <p>Scans Go source code and extracts all exported declarations &mdash; functions, types, methods, constants, variables &mdash; along with their doc comments. Produces a compact summary of a package's public API suitable for LLM context.</p>
+        <a href="https://github.com/perbu/gosummarize">github.com/perbu/gosummarize</a>
+    </div>
+
+    <div class="tool">
+        <h3>bump</h3>
+        <p>Reads git tags to find the current version, increments it, updates <code>.version</code> files in the repo, commits the change, and creates a new tag. Handles major, minor, and patch bumps.</p>
+        <a href="https://github.com/perbu/bump">github.com/perbu/bump</a>
+    </div>
+
+    <div class="tool">
+        <h3>calvin</h3>
+        <p>Checks Google Calendar from the terminal. Give it a username and optional date and it shows events with times and attendees. Supports relative dates like &ldquo;tomorrow&rdquo; and &ldquo;next monday&rdquo;.</p>
+        <a href="https://github.com/perbu/calvin">github.com/perbu/calvin</a>
+    </div>
+
+    <div class="tool">
+        <h3>blamestats</h3>
+        <p>Analyzes git repositories for code ownership and churn statistics. Shows lines of code per author with age breakdown, and tracks how much of each author's code has been modified or deleted over time.</p>
+        <a href="https://github.com/perbu/blamestats">github.com/perbu/blamestats</a>
+    </div>
+</section>
+
+<hr>
+
+<footer>
+    Per Buer &mdash; Oslo
+</footer>
+
+</body>
+</html>
