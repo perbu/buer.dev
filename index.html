@@ -1,100 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Per Buer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-    <h1>Per Buer</h1>
-    <div class="tagline">Computer enthusiast</div>
-    <div class="links">
-        <a href="https://github.com/perbu">GitHub</a>
-        <a href="https://codeberg.org/perbu">Codeberg</a>
-        <a href="https://linkedin.com/in/perbu">LinkedIn</a>
-    </div>
-</header>
-
-<nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="tools.html">CLI Tools</a>
-    <a href="weenect.html">Weenect</a>
-</nav>
-
-<hr>
-
-<section class="about">
-    <p>I founded Varnish Software. These days I mostly write Go and am slowly learning Rust.</p>
-</section>
-
-<hr>
-
-<section class="projects">
-    <h2>Projects</h2>
-    <div class="project">
-        <h3>CDB</h3>
-        <p>A 64-bit Constant Database library for Go with memory-mapped reads. Zero-copy lookups in ~22ns, iteration under 2ns per entry, zero allocations.</p>
-        <a href="https://github.com/perbu/cdb">github.com/perbu/cdb</a>
-    </div>
-    <div class="project">
-        <h3>SOV Reporter</h3>
-        <p>Scans websites for CLOUD Act and digital sovereignty exposure. Checks where your data actually ends up.</p>
-        <a href="https://sov-reporter.eu">sov-reporter.eu</a>
-    </div>
-    <div class="project">
-        <h3>Kasa</h3>
-        <p>A conversational Kubernetes deployment assistant, written in Go. Describe what you want and it figures out the manifests.</p>
-        <a href="https://kasa.buer.dev/">kasa.buer.dev</a>
-    </div>
-    <div class="project">
-        <h3>Varnish Gateway</h3>
-        <p>An performant implementation of the kubernetes Gateway API spec</p>
-        <a href="https://github.com/varnish/gateway/">github.com/varnish/gateway</a>
-    </div>
-</section>
-
-<hr>
-<h2>Remote Terminal access</h2>
-<section class="applet-container">
-    <div class="applet">
-        <div class="applet-titlebar">
-            <span>BuerTerminal.class</span>
-            <div class="controls">
-                <span class="ctrl-btn">_</span>
-                <span class="ctrl-btn">&square;</span>
-                <span class="ctrl-btn">X</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Per Buer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Per Buer</h1>
+            <div class="tagline">Computer enthusiast</div>
+            <div class="links">
+                <a href="https://github.com/perbu">GitHub</a>
+                <a href="https://codeberg.org/perbu">Codeberg</a>
+                <a href="https://linkedin.com/in/perbu">LinkedIn</a>
             </div>
-        </div>
-        <div class="applet-body" id="applet-body">
-            <div id="log"></div>
-            <div class="progress-outer" id="progress-outer">
-                <div class="progress-inner" id="progress-inner"></div>
+        </header>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="tools.html">CLI Tools</a>
+            <a href="weenect.html">Weenect</a>
+        </nav>
+
+        <hr />
+
+        <section class="about">
+            <p>
+                A long time ago I founded Varnish Software. These days I mostly
+                write Go and am slowly learning Rust.
+            </p>
+        </section>
+
+        <hr />
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>CDB</h3>
+                <p>
+                    A 64-bit Constant Database library for Go with memory-mapped
+                    reads. Zero-copy lookups in ~22ns, iteration under 2ns per
+                    entry, zero allocations.
+                </p>
+                <a href="https://github.com/perbu/cdb">github.com/perbu/cdb</a>
             </div>
-            <div class="prompt-area" id="prompt-area">
-                <form id="prompt-form">
-                    <span class="prompt-label">&gt;</span>
-                    <input type="text" id="prompt-input" autocomplete="off" autofocus>
-                </form>
-                <div class="response" id="response"></div>
+            <div class="project">
+                <h3>SOV Reporter</h3>
+                <p>
+                    Scans websites for CLOUD Act and digital sovereignty
+                    exposure. Checks where your data actually ends up.
+                </p>
+                <a href="https://sov-reporter.eu/">sov-reporter.eu</a>
             </div>
-        </div>
-        <div class="applet-footer">Java&trade; Applet 1.0 &mdash; Best viewed in Netscape Navigator 4.0</div>
-    </div>
-</section>
+            <div class="project">
+                <h3>Kasa</h3>
+                <p>
+                    A conversational Kubernetes deployment assistant, written in
+                    Go. Describe what you want and it figures out the manifests.
+                    The meta-goal was to write a strict, agentic harness that
+                    would allow you to use LLMs for doing changes in production
+                    environments.
+                </p>
+                <a href="https://kasa.buer.dev/">kasa.buer.dev</a>
+            </div>
+            <div class="project">
+                <h3>Varnish Gateway</h3>
+                <p>
+                    An performant implementation of the kubernetes Gateway API
+                    spec. My primary focus was to make VCL optional and for the
+                    product to feel <i>native</i> Kubernetes.
+                </p>
+                <a href="https://github.com/varnish/gateway/"
+                    >github.com/varnish/gateway</a
+                >
+            </div>
+        </section>
 
-<hr>
+        <hr />
+        <h2>Remote Terminal access</h2>
+        <section class="applet-container">
+            <div class="applet">
+                <div class="applet-titlebar">
+                    <span>BuerTerminal.class</span>
+                    <div class="controls">
+                        <span class="ctrl-btn">_</span>
+                        <span class="ctrl-btn">&square;</span>
+                        <span class="ctrl-btn">X</span>
+                    </div>
+                </div>
+                <div class="applet-body" id="applet-body">
+                    <div id="log"></div>
+                    <div class="progress-outer" id="progress-outer">
+                        <div class="progress-inner" id="progress-inner"></div>
+                    </div>
+                    <div class="prompt-area" id="prompt-area">
+                        <form id="prompt-form">
+                            <span class="prompt-label">&gt;</span>
+                            <input
+                                type="text"
+                                id="prompt-input"
+                                autocomplete="off"
+                                autofocus
+                            />
+                        </form>
+                        <div class="response" id="response"></div>
+                    </div>
+                </div>
+                <div class="applet-footer">
+                    Java&trade; Applet 1.0 &mdash; Best viewed in Netscape
+                    Navigator 4.0
+                </div>
+            </div>
+        </section>
 
-<footer>
-    Per Buer &mdash; Oslo
-</footer>
+        <hr />
 
-<script src="term.js"></script>
+        <footer>Per Buer &mdash; Oslo</footer>
 
-</body>
+        <script src="term.js"></script>
+    </body>
 </html>
